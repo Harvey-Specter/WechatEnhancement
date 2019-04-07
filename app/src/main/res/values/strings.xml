@@ -5,7 +5,7 @@
     <string name="pref_not_self">自己发的不抢</string>
     <string name="pref_delay">延时抢红包</string>
     <string name="pref_delay_time">延时时长</string>
-    <string name="pref_whisper">私聊不抢</string>
+    <string name="pref_whisper">私聊不抢_1</string>
     <string name="quick_open">快速拆包</string>
     <string name="receive_transfer">自动接收转账</string>
     <string name="pref_show_wechat_id">显示微信ID</string>

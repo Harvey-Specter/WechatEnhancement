@@ -113,6 +113,5 @@ public class AntiRevoke implements IPlugin {
 
         XposedHelpers.setLongField(msg, "field_createTime", createTime + 1L);
         XposedHelpers.callMethod(storageInsertClazz, HookParams.getInstance().MsgInfoStorageInsertMethod, msg, false);
-
     }
 }
