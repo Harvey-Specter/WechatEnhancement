@@ -1,4 +1,20 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/zfb_setting">
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="zfb_mon"
+            android:title="@string/zfb_mon" />
+
+        <EditTextPreference
+            android:key="zfb_account"
+            android:dependency="zfb_mon"
+            android:title="@string/zfb_account" />
+
+        <!-- EditTextPreference
+            android:key="repair"
+            android:title="@string/repair" / -->
+    </PreferenceCategory>
+
     <PreferenceCategory android:title="@string/other_setting">
         <SwitchPreference
             android:defaultValue="true"

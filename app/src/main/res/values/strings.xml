@@ -1,5 +1,11 @@
 <resources>
-    <string name="app_name">微信增强</string>
+
+    <string name="zfb_setting">支付宝</string>
+    <string name="zfb_mon">监控</string>
+    <string name="zfb_account">账号</string>
+    <!-- string name="zfb_cburl">回调地址</string -->
+
+    <string name="app_name">支付增强</string>
     <string name="app_desc">抢红包，防撤回，去广告</string>
     <string name="pref_open">抢红包</string>
     <string name="pref_not_self">自己发的不抢</string>

@@ -18,6 +18,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceClickListener;
+import android.preference.PreferenceCategory;
 import android.preference.PreferenceFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
@@ -74,6 +75,17 @@ public class SettingsActivity extends AppCompatActivity {
                     return true;
                 }
             });
+
+//            PreferenceCategory zfbCategory = (PreferenceCategory) findPreference("zfb_setting");
+//            Preference zfb_mon = findPreference("zfb_mon");
+//            Preference zfb_account = findPreference("zfb_account");
+//            zfb_mon.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+//                @Override
+//                public boolean onPreferenceChange(Preference preference, Object o) {
+//                    //zfb_account.
+//                    return true;
+//                }
+//            });
 
             Preference show_icon = findPreference("show_icon");
             show_icon.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
