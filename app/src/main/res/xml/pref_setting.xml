@@ -117,9 +117,6 @@
             android:title="@string/pref_break_limit" />
     </PreferenceCategory>
 
-
-
-
     <PreferenceCategory android:title="@string/about">
         <Preference
             android:key="author"
