@@ -37,7 +37,8 @@ public class Main implements IXposedHookLoadPackage {
 
     @Override
     public void handleLoadPackage(final LoadPackageParam lpparam) {
-        if (lpparam.packageName.equals(HookParams.WECHAT_PACKAGE_NAME)) {
+        log("lpparam.packageName-----------"+lpparam.packageName);
+        if (lpparam.packageName.equals(HookParams.WECHAT_PACKAGE_NAME)||lpparam.packageName.equals(HookParams.ALIPAY_PACKAGE_NAME)) {
             try {
                 XposedHelpers.findAndHookMethod(ContextWrapper.class, "attachBaseContext", Context.class, new XC_MethodHook() {
                     @Override
@@ -45,9 +46,12 @@ public class Main implements IXposedHookLoadPackage {
                         super.afterHookedMethod(param);
                         Context context = (Context) param.args[0];
                         String processName = lpparam.processName;
+                        log("processName-----------"+processName);
                         //Only hook important process
                         if (!processName.equals(HookParams.WECHAT_PACKAGE_NAME) &&
-                                !processName.equals(HookParams.WECHAT_PACKAGE_NAME + ":tools")
+                                !processName.equals(HookParams.WECHAT_PACKAGE_NAME + ":tools") &&
+                                !processName.equals(HookParams.ALIPAY_PACKAGE_NAME) &&
+                                !processName.equals(HookParams.ALIPAY_PACKAGE_NAME + ":tools")
                                 ) {
                             return;
                         }
