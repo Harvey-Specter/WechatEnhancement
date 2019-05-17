@@ -69,6 +69,9 @@ public class PreferencesUtils {
         return getInstance().getBoolean("is_anti_sns_delete", false);
     }
 
+    public static boolean isAliMon() {
+        return getInstance().getBoolean("zfb_mon", false);
+    }
     public static boolean isADBlock() {
         return getInstance().getBoolean("is_ad_block", false);
     }
